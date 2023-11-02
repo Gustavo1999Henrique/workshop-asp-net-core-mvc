@@ -32,5 +32,15 @@ namespace SalesWebMvc.Controllers
             _sellerService.Insert(obj);
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
+        public IActionResult Details()
+        {
+            return View();
+        }
     }
 }
