@@ -11,6 +11,36 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form ></form>
+        <form>
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Seller.Name)</label>
+                <intput class="form-control">@Html.DisplayFor(model => model.Seller.Name)</intput>
+            </div>
+            <div class-="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Seller.Email)</label>
+                <input class="form-control">@Html.DisplayFor(model => model.Seller.Email)</input>
+            </div>
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Seller.BirthDate)</label>
+                <input class="form-control">@Html.DisplayFor(model => model.Seller.BirthDate)</label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Seller.BirthDate)</label>
+                <input class="form-control">@Html.DisplayFor(model => model.Seller.BirthDate)</label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Seller.BaseSalary)</label>
+                <input class="form-control">@Html.DisplayFor(model => model.Seller.BaseSalary)</input>
+            </div>
+            <div class="form-group">
+                <label class="control=label">@Html.DisplayNameFor(model => model.Seller.DepartmentId)</label>
+                <select asp-for="Seller.Department" asp-items="@(new SelectList(Model.Departments, "id", "Name"))" class="form-control"></select>
+            </div>
+            <div asp-action="Edit" class="form-group">
+                <input type="hidden" asp-for="Seller.Id" />
+                <input asp-action="Edit" type="submit" value="Save Changes" class="btn btn-default" />
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
     </div>
 </div>
